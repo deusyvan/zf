@@ -2,6 +2,11 @@
 
 use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
+//Para ativar os erros em desenvolvimento
+if ($_SERVER['APPLICATION_ENV'] === 'development'){
+    error_reporting(E_ALL);
+    ini_set("display_errors", "On");
+}
 
 /**
  * This makes our life easier when dealing with paths. Everything is relative
